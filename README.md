@@ -11,9 +11,13 @@
 **Stop your AI agents from stepping on each other.**  
 Align any number of developers and AI agents ($N$ developers, $M$ agents) across distributed machines and repositories with real-time conflict radar, zero-token context sync, and an omniscient Super Orchestrator. Scalable from a 2-person hackathon team to a 100+ engineer enterprise.
 
-[Features](#-key-features) • [Architecture](#-architecture) • [Workflows](#-universal-workflows) • [Quickstart](#-quickstart) • [Roadmap](#-roadmap)
+[Blueprint & Spec](BLUEPRINT.md) • [Features](#-key-features) • [Architecture](#-architecture) • [Workflows](#-universal-workflows) • [Quickstart](#-quickstart) • [Roadmap](#-roadmap)
 
 </div>
+
+---
+
+> 💡 **Community & Team RFC**: We are actively gathering feedback on the technical design and backend language selection (Go vs. Rust). Check out the full **[Architectural Blueprint & Implementation Plan (BLUEPRINT.md)](BLUEPRINT.md)** to review and contribute suggestions!
 
 ---
 
