@@ -9,7 +9,7 @@
 [![Architecture: Zero-Token-Waste](https://img.shields.io/badge/Architecture-Zero--Token--Waste-amber.svg)](#token-economics)
 
 **Stop your AI agents from stepping on each other.**  
-Align multi-developer AI agents across distributed machines and repositories with real-time conflict radar, zero-token context sync, and an omniscient Super Orchestrator.
+Align any number of developers and AI agents ($N$ developers, $M$ agents) across distributed machines and repositories with real-time conflict radar, zero-token context sync, and an omniscient Super Orchestrator. Scalable from a 2-person hackathon team to a 100+ engineer enterprise.
 
 [Features](#-key-features) • [Architecture](#-architecture) • [Workflows](#-universal-workflows) • [Quickstart](#-quickstart) • [Roadmap](#-roadmap)
 
@@ -50,11 +50,12 @@ flowchart TD
         Hub --- Radar
     end
 
-    subgraph Execution["3. Local Coding Harnesses (Distributed Machines)"]
+    subgraph Execution["3. Local Coding Harnesses (Distributed Across N Machines)"]
         direction TB
-        Dev1["Dev 1: Antigravity CLI<br/>(Branch: auth)"]
-        Dev2["Dev 2: Claude Code<br/>(Branch: billing)"]
-        Dev3["Dev 3: Cursor / OpenCode<br/>(Branch: frontend)"]
+        Dev1["Dev 1: Antigravity CLI<br/>(Machine 1 • Branch: auth)"]
+        Dev2["Dev 2: Claude Code<br/>(Machine 2 • Branch: billing)"]
+        DevDots["..."]
+        DevN["Dev N: Cursor / OpenCode / Any Harness<br/>(Machine N • Any Branch)"]
     end
 
     subgraph SuperOrch["4. Super Orchestrator"]
