@@ -1,0 +1,32 @@
+# Binaries & Build Output
+bin/
+dist/
+target/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Dependencies
+node_modules/
+vendor/
+
+# Database & Local State
+*.db
+*.sqlite
+*.sqlite3
+.mesh/local/
+*.log
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*~
