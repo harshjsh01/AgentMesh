@@ -21,9 +21,9 @@ Align any number of developers and AI agents ($N$ developers, $M$ agents) across
 
 ---
 
-## 🚨 The Problem: Multi-Agent Context Silos & Collision
+## 🚨 The Problem: Multi-Agent Context Silos & The Tooling Gap
 
-When individual software engineers work alongside AI agents, they use different tools:
+When engineering teams work with AI agents, team members use fragmented tools:
 - **Ideation & Brainstorming**: Gemini, NotebookLM, ChatGPT, Claude.
 - **Coding & Execution**: Google Antigravity CLI / 2.0, Claude Code, OpenCode, Cursor, Aider.
 
@@ -31,6 +31,38 @@ When individual software engineers work alongside AI agents, they use different 
 1. **Context Blindness**: Dev 1's agent refactors the database schema in branch `feature/auth`. Dev 2's agent on another machine builds an API assuming the old schema. Both write valid code that catastrophically collides at merge time.
 2. **Token Drain**: Dumping entire conversation transcripts or team logs into every prompt explodes API token costs and dilutes agent attention.
 3. **The Ideation-Code Disconnect**: Architectural decisions discussed in NotebookLM or ChatGPT brainstorming threads rarely make it into coding agents without tedious manual copying.
+
+### Why Existing Tools Fail to Solve This
+
+No single existing tool coordinates distributed human-agent teams across heterogeneous harnesses:
+
+| Tool Category | Examples | What They Do | Why They Fail for Real Teams |
+| :--- | :--- | :--- | :--- |
+| **Single-Dev Coding Harnesses** | Antigravity CLI, Claude Code, Cursor, Aider | Execute tasks for **one developer on one machine**. | **Context Silos:** Completely blind to concurrent branches, external agent sessions, and teammate edits. |
+| **Multi-Agent Swarms** | CrewAI, AutoGen, MetaGPT, ChatDev | Run scripted bot swarms inside a **single process**. | **Synthetic Toys:** Real teams don't want scripted bots in a void; they have human developers directing individual agents across distributed laptops. |
+| **Proprietary Walled Gardens** | Cursor Teams, Augment Code, Copilot Workspace | Centralized codebase indexing and search. | **Vendor Lock-in & Passive:** Only works inside their proprietary editor; passive indexing with zero real-time conflict radar for uncommitted agent sessions. |
+
+### The Missing Coordination Layer
+
+```
+┌───────────────────────────────────────────────────────────────────┐
+│                      WHAT THE INDUSTRY HAS                        │
+├───────────────────────────────┬───────────────────────────────────┤
+│ Single dev + Single agent     │ Antigravity, Claude Code, Cursor  │
+│ Scripted bots in one process  │ CrewAI, AutoGen, LangGraph        │
+│ Proprietary team search       │ Cursor Teams, Augment Code        │
+├───────────────────────────────┴───────────────────────────────────┤
+│                       WHAT IS MISSING 🚨                          │
+├───────────────────────────────────────────────────────────────────┤
+│ • Cross-machine coordination for real human-agent teams           │
+│ • Real-time conflict radar before Git commits                     │
+│ • Zero-token-waste context pull (MCP-native)                      │
+│ • Ideation (NotebookLM/Gemini) ↔ Coding Agent prompt bridge       │
+│ • Universal Super Orchestrator for the whole team                 │
+│                                                                   │
+│                     👉 THIS IS AGENTMESH 👈                       │
+└───────────────────────────────────────────────────────────────────┘
+```
 
 ---
 

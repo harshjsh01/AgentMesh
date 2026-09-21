@@ -15,6 +15,14 @@ Modern software development teams are experiencing severe **context fragmentatio
 - **Scale**: Architected from the ground up to support **any number of developers ($N$)** and **any number of concurrent agents ($M$)** across distributed machines, repositories, and timezones—from a 2-person startup to a 500+ engineer enterprise.
 - **AgentMesh** is the coordination layer that connects these heterogeneous human-agent pairs into a synchronized mesh with **zero token waste**, **real-time conflict radar**, and an **omniscient Super Orchestrator**.
 
+### The Competitive Landscape & Tooling Gap
+
+| Category | Representative Tools | Strengths | Critical Gap for Real-World Teams |
+| :--- | :--- | :--- | :--- |
+| **Single-Dev Coding Harnesses** | Antigravity CLI, Claude Code, Cursor, Aider | Superb file-editing & execution on one machine. | **Siloed Context**: Zero visibility into concurrent teammate branches, uncommitted edits, or remote agent sessions. |
+| **Multi-Agent Swarms** | CrewAI, AutoGen, MetaGPT, ChatDev | Automated agent-to-agent scripting in a single Python process. | **Synthetic Toys**: Real engineering teams do not run unmonitored bot swarms; they have human engineers running individual agents across distributed laptops. |
+| **Proprietary Walled Gardens** | Cursor Teams, Augment Code, Copilot Workspace | Team-wide indexing and codebase search. | **Vendor Lock-in & Passive**: Closed ecosystem; passive RAG without real-time conflict radar or active soft locks. |
+
 ---
 
 ## 2. Universal Ingestion: Designed for Every Developer Persona
